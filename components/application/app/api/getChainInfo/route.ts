@@ -1,3 +1,4 @@
+import { ChainInfo } from "@/app/types/chain-info";
 import { NextResponse } from "next/server";
 
 export async function GET(req: Request) {
@@ -37,17 +38,3 @@ export async function GET(req: Request) {
   return NextResponse.json(mockData);
 }
 
-export class ChainInfo {
-    name: String;
-    layer: String;
-    status: String;
-    configuration: String;
-    upgradeKeys: String;
-    faultProofs: String;
-    decentStage: String;
-    charter: String;
-    charterLink: String;
-    dataAvail: String;
-    dataAvailLink: String;
-    blockTime: String;
-  }
