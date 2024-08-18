@@ -1,6 +1,6 @@
 import axios from "axios";
 import * as toml from "toml";
-import { ChainInfo } from "../types/chain-info"; // Ajusta la ruta según tu estructura de proyecto
+import { ChainInfo } from "../types/chain-info"; 
 
 export async function getChainInfoListService(): Promise<ChainInfo[]> {
   try {
@@ -28,15 +28,7 @@ export async function getChainInfoListService(): Promise<ChainInfo[]> {
             : "Testnet";
           chainInfo.configuration =
             currentChain.superchain_level == 1 ? "Standard" : "Frontier";
-
-          chainInfo.upgradeKeys = "";
-          chainInfo.faultProofs = "";
-          chainInfo.decentStage = "";
-          chainInfo.charter = "";
-          chainInfo.charterLink = "";
-          chainInfo.dataAvail = "";
-          chainInfo.dataAvailLink = "";
-          chainInfo.blockTime = "";
+   
 
           await setChainInfoDetail(
             detail_url + currentChain.identifier + ".toml",
